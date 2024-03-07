@@ -1,0 +1,19 @@
+{
+  "clientes": [
+    {
+      "id": "ce55",
+      "nome": "Renato",
+      "documento": "12346478",
+      "telefone": "11988884444",
+      "email": "renato@renato.com"
+    },
+    {
+      "id": "6cae",
+      "nome": "Renato Augusto",
+      "documento": "dsadasd",
+      "telefone": "+5511980643921",
+      "email": "renatoasousa@live.com"
+    }
+  ],
+  "produtos": []
+}

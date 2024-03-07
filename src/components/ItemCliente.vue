@@ -23,68 +23,61 @@ export default {
 
 <style lang="scss" scoped>
 
-@import "../scss/_colors.scss";
+@import "../scss/_global.scss";
 
     .base {
+
+        @include flexCenter(space-between, row);
+
         background: $bg_elements_primary;
         width: 400px;
         height: 80px;
-        display: flex;
-        flex-direction: columns;
         margin: 15px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
     }
     .lateral{
-        
+        @include flexCenter(space-around, column);
+
         left: 0px;
         width: 10%;
         height: 100%;
         background: #D9D9D9;
-        display: flex;
-        flex-direction:column;
-        align-items: center;
-        justify-content: space-around;
+        
     }
     .fa-pencil{
         margin-right: 5%;
         color: $icons;
     }
     .textual{
-        display: flex;
-        flex-direction: column;
+        @include flexCenter(flex-start, column);
         width: 58%;
- 
-        text-align: start;
+        
+        span{
+            width: 100%;
+            text-align: left;
+        }
     }
     .img_profile{
         width: 50px;
         height: 50px;
     }
     .email{
-        font-family: 'Inter';
-        font-style: normal;
         font-weight: 400;
         font-size: 16px;
         line-height: 19px;
         color: $text;
+
+
     }
     .title{
-
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 400;
+        font-weight: 500;
         font-size: 22px;
         line-height: 27px;
-
         color: $title; 
     }
     .status{    
-        height: 25px;
-        width: 25px;
-        border-radius: 25px;
+        height: 20px;
+        width: 20px;
+        border-radius: 20px;
         background: $active;
     }
 </style>

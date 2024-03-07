@@ -1,0 +1,45 @@
+@import './colors.scss';
+
+
+@mixin botao(){
+    padding: 15px 45px 10px 45px;
+    background-color: $bg_elements_primary;
+    color: $title;
+}
+
+.input-group{
+    position: relative;
+}
+
+.input{
+    width: 300px;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font: inherit;
+    color: #FBB232;
+    background-color: transparent;
+    outline: 2px solid #C3C3C3;
+    margin-bottom: 20px;
+    transition: 1s linear;
+}
+
+.input-label{
+    position: absolute;
+    top:0;
+    left:0;
+    transform: translate(10px, 10px);
+    transition: transform .25s;
+}
+
+.input:focus+.input-label,
+.input:valid+.input-label{
+    transform: translate(10px, -10px) scale(.9);
+    color: #FBB232;
+    padding-inline: 5px;
+    background-color: #000;
+}
+.input:is(:focus, :valid){
+    outline-color: #FBB232;
+    
+}

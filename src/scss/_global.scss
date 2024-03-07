@@ -1,0 +1,10 @@
+@import './colors.scss';
+@import './inputs.scss';
+
+@mixin flexCenter($justfy, $direction){
+        display: flex;
+        align-items: center;
+        flex-direction: $direction;
+        justify-content: $justfy;
+        
+}
