@@ -1,19 +1,68 @@
 {
   "clientes": [
     {
-      "id": "ce55",
-      "nome": "Renato",
-      "documento": "12346478",
-      "telefone": "11988884444",
-      "email": "renato@renato.com"
+      "id": "bf0c",
+      "nome": "Renato Augusto dos Santos Sousa",
+      "documento": "456464",
+      "telefone": "1198064392",
+      "email": "renato.dexter@gmail.com",
+      "status": true,
+      "produtos": ""
     },
     {
-      "id": "6cae",
-      "nome": "Renato Augusto",
-      "documento": "dsadasd",
-      "telefone": "+5511980643921",
-      "email": "renatoasousa@live.com"
+      "id": "6663",
+      "nome": "Lucas Silva e Silva",
+      "documento": "",
+      "telefone": "32988822172",
+      "email": "lucasmundodalua@gmail.com",
+      "status": true,
+      "produtos": [
+        "produto 3"
+      ]
+    },
+    {
+      "id": "7aae",
+      "nome": "Lucas Silva e Silva",
+      "documento": "454",
+      "telefone": "32988822172",
+      "email": "lucasmundodalua@gmail.com",
+      "status": true,
+      "produtos": [
+        "Produto 1",
+        "produto 3"
+      ]
+    },
+    {
+      "id": "da8e",
+      "nome": "Maria da Silva",
+      "documento": "4548",
+      "telefone": "21889839282",
+      "email": "mariazinha@yahoo.com.br",
+      "status": false,
+      "produtos": ""
     }
   ],
-  "produtos": []
+  "produtos": [
+    {
+      "id": "bba4",
+      "nome": "Produto 1",
+      "status": true
+    },
+    {
+      "id": "9209",
+      "nome": "Produto 2",
+      "status": false
+    },
+    {
+      "id": "0524",
+      "nome": "produto 3 ",
+      "status": true
+    },
+    {
+      "id": "60d5",
+      "nome": "produto 4",
+      "status": false
+    }
+  ],
+  "associacoes": []
 }

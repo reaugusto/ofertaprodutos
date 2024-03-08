@@ -1,24 +1,34 @@
 <template>
+    
     <div class="base">
         <div class="lateral">
             <div class="status"></div>
-            <i class="fa-solid fa-eye"></i>
+            <router-link :to="`/cliente/${dados.id}`"><i class="fa-solid fa-eye"></i></router-link>
         </div>
         <img class="img_profile" src="../assets/Ellipse 1.png" />
         <div class="textual">
-            <span class="title">Renato Sousa</span>
-            <span class="email">renato@email.com</span>
+            <span class="title">{{dados.nome}}</span>
+            <span class="email">{{dados.email}}</span>
         </div>
-        <i class="fa-solid fa-pencil"></i>
+        
     </div>
 </template>
 
 <script>
 
 export default {
-  name: 'ItemCliente'
-
+  name: 'ItemCliente',
+  props: {
+        dados: Object,
+    },
+    data: () => ({
+        color: ''
+  }),
+    created(){
+    this.color = this.dados.status ? '#12E200' : '#EE0000';
+    }
 }
+
 </script>
 
 <style lang="scss" scoped>
@@ -78,7 +88,7 @@ export default {
         height: 20px;
         width: 20px;
         border-radius: 20px;
-        background: $active;
+        background: v-bind(color);
     }
 </style>
 

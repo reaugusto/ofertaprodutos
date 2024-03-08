@@ -13,18 +13,6 @@
                         <input type="text" name="nome" id="nome" value="" class="input" required />
                         <label for="nome" class="input-label" >Nome</label>
                     </div>
-                    <div class="input-group">
-                        <input type="text" name="documento" id="documento" value="" class="input" required />
-                        <label for="documento" class="input-label" >Documento</label>
-                    </div>
-                    <div class="input-group">
-                        <input type="tel" name="telefone" id="telefone" value="" class="input" required />
-                        <label for="Telefone" class="input-label" >Telefone</label>
-                    </div>
-                    <div class="input-group">
-                        <input type="email" name="email" id="email" value="" class="input" required />
-                        <label for="email" class="input-label" >E-mail</label>
-                    </div>
                     <p>Ativar?</p>
 
                     <div class="slideOne"> 
@@ -42,38 +30,28 @@
 
 <script>
 export default {
-  name: 'FormClienteModal',
+  name: 'FormProdutos',
   methods: {
     close(){
         this.$emit('close')
     },
     cadastrar(){
         const inputNome = document.querySelector('#nome');
-        const inputDocumento = document.querySelector('#documento');
-        const inputTelefone = document.querySelector('#telefone');
-        const inputEmail = document.querySelector('#email');
         const inputStatus = document.querySelector('#slideOne');
         console.log(JSON.stringify({
                             nome: inputNome.value,
-                            documento: inputDocumento.value,
-                            telefone: inputTelefone.value,
-                            email: inputEmail.value,
                             status: inputStatus.checked
 
                         }));
 
-        fetch('http://localhost:3000/clientes', {
+        fetch('http://localhost:3000/produtos', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
                             nome: inputNome.value,
-                            documento: inputDocumento.value,
-                            telefone: inputTelefone.value,
-                            email: inputEmail.value,
-                            status: inputStatus.checked,
-                            produtos: ''
+                            status: inputStatus.checked
                         }
                     )
 
